@@ -147,15 +147,24 @@ body {
 
 .section-heading {
   text-align: center;
+  width:100%;
   margin-top: 140px;
   margin-bottom: 80px;
 }
+
 
 .section-heading h2 {
   font-size: 28px;
   font-weight: 800;
   color: #232d39;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.section-heading p {
+  font-size: 20px;
   letter-spacing: 0.5px;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -177,6 +186,9 @@ body {
 .dark-bg p {
   color: #fff;
 }
+
+
+
 
 
 
@@ -718,12 +730,15 @@ subscribe
 
 #call-to-action {
   padding: 120px 0px;
-  background-image: url(../images/cta-bg.jpg);
+  background-image: url(../images/240_F_166983065_JmPXU2dZqMMBGFFi45fT4N4N27sXue43.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
 }
+  
+
+
 
 .cta-content h2 {
   font-size: 36px;
