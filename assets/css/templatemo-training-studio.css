@@ -164,7 +164,7 @@ body {
 }
 
 .section-heading p {
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 0.5px;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -285,12 +285,7 @@ header
   transition: all 0.3s ease 0s;
 }
 
-.header-area .main-nav .logo em {
-  font-style: normal;
-  color: #89ab00;
-  font-weight: 900;
-}
-
+ 
 .header-area .main-nav .nav {
   float: right;
   margin-top: 27px;
