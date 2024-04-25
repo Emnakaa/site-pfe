@@ -18,12 +18,10 @@ https://templatemo.com/tm-548-training-studio
 
 -->
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
-
-    <link rel="stylesheet" href="assets/css/templatemo-training-studio.css">
-
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/font-awesome.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/templatemo-training-studio.css') }}">
+    
 
     </head>
     
@@ -51,7 +49,7 @@ https://templatemo.com/tm-548-training-studio
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         
-                        <a href="index.html" class="logo"><img src="assets/images/logo (1).png" alt="logo gark sport" style="width: 200px; height: auto;"></a>
+                        <a href="/" class="logo"><img src=" ../assets/images/logo (1).png" alt="logo gark sport" style="width: 200px; height: auto;"></a>
 
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
@@ -61,8 +59,12 @@ https://templatemo.com/tm-548-training-studio
                             <li class="scroll-to-section"><a href="#our-classes">Fonctionnement</a></li>
                             <li class="scroll-to-section"><a href="#schedule">Partenariat</a></li>
                             <li class="scroll-to-section"><a href="#contact-us">Contactez-nous</a></li> 
-                            <li class="main-button "><a href="html/login.html">Se connecter</a></li>
-                            
+                            {% if username %}
+                            <li class="main-button "><a href="/logout">Quiter</a></li>
+                            {% else %}
+                            <li class="main-button "><a href="/login">Se connecter</a></li>
+                            {% endif %}
+
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -78,18 +80,25 @@ https://templatemo.com/tm-548-training-studio
     <!-- ***** Main Banner Area Start ***** -->
     <div class="main-banner" id="top">
         <video autoplay muted loop id="bg-video">
-            <source src="assets/images/gym-v4 ‐ Réalisée avec Clipchamp.mp4"type="video/mp4" />
+            <source src=" ../assets/images/gym-v4 ‐ Réalisée avec Clipchamp.mp4"type="video/mp4" />
             
         </video>
 
         <div class="video-overlay header-text">
             <div class="caption">
+                {% if username %}
+                <h6>Bienvenu, {{username}} !</h6>
+                {% else %}
                 <h6>work harder, get stronger</h6>
+                {% endif %}
                 <h4>Libérez le potentiel de votre équipe avec notre solution de <em>suivi des performances</em></h4>
                 <!-- <h4>Optimisez les performances des joueurs, prenez des décisions éclairées et <em>dominez le terrain</em></h4> -->
                 
                 <div class="main-button scroll-to-section">
-                    <a href="html/signup.html">Devenir un membre</a>
+                    {% if username %}
+                    {% else %}
+                    <a href="/signup">Devenir un membre</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -103,7 +112,7 @@ https://templatemo.com/tm-548-training-studio
                     <div class="section-heading">
                         
                         <h2>A <em>Propos</em></h2>
-                        <img src="assets/images/line-dec.png" alt="waves">
+                        <img src=" ../assets/images/line-dec.png" alt="waves">
                         <p>
                             <!-- Grâce à sa capacité à fournir des informations exploitables, à améliorer le développement des joueurs et à rationaliser l'analyse des performances,  -->
                             Le système Gark sport de Détection et Suivi des Joueurs est sur le point de transformer la façon dont les équipes sportives abordent l'optimisation des performances.
@@ -115,7 +124,7 @@ https://templatemo.com/tm-548-training-studio
                     <ul class="features-items">
                         <li class="feature-item">
                             <div class="left-icon">
-                                <img src="assets/images/Copie de Copie de IR peak analysis Last weeks July.png" alt="First One">
+                                <img src=" ../assets/images/Copie de Copie de IR peak analysis Last weeks July.png" alt="First One">
                             </div>
                             <div class="right-content">
                                 <h4>Evaluations objectives </h4>
@@ -124,7 +133,7 @@ https://templatemo.com/tm-548-training-studio
                         </li>
                         <li class="feature-item">
                             <div class="left-icon">
-                                <img src="assets/images/gaintemp.png" alt="second one">
+                                <img src=" ../assets/images/gaintemp.png" alt="second one">
                             </div>
                             <div class="right-content">
                                 <h4>Gain de temps et de ressources </h4>
@@ -133,7 +142,7 @@ https://templatemo.com/tm-548-training-studio
                         </li>
                         <li class="feature-item">
                             <div class="left-icon">
-                                <img src="assets/images/precision.png" alt="third gym training">
+                                <img src=" ../assets/images/precision.png" alt="third gym training">
                             </div>
                             <div class="right-content">
                                 <h4>Précision et fiabilité améliorées</h4>
@@ -146,7 +155,7 @@ https://templatemo.com/tm-548-training-studio
                     <ul class="features-items">
                         <li class="feature-item">
                             <div class="left-icon">
-                                <img src="assets/images/analyse.png" alt="fourth muscle">
+                                <img src=" ../assets/images/analyse.png" alt="fourth muscle">
                             </div>
                             <div class="right-content">
                                 <h4>Optimiser les stratégies de jeu</h4>
@@ -155,7 +164,7 @@ https://templatemo.com/tm-548-training-studio
                         </li>
                         <li class="feature-item">
                             <div class="left-icon">
-                                <img src="assets/images/cultiver.png" alt="training fifth">
+                                <img src=" ../assets/images/cultiver.png" alt="training fifth">
                             </div>
                             <div class="right-content">
                                 <h4>cultiver les jeunes talents</h4>
@@ -164,7 +173,7 @@ https://templatemo.com/tm-548-training-studio
                         </li>
                         <li class="feature-item">
                             <div class="left-icon">
-                                <img src="assets/images/plan.png" alt="gym training">
+                                <img src=" ../assets/images/plan.png" alt="gym training">
                             </div>
                             <div class="right-content">
                                 <h4>Développer des plans d'entraînement personnalisés</h4>
@@ -188,7 +197,11 @@ https://templatemo.com/tm-548-training-studio
                         <h2>Lancez- <em>vous</em>, aujourd' <em>hui</em>!</h2>
                         <p>Identifiez vos points forts et vos points faibles, prenez des décisions éclairées et atteignez de nouveaux sommets dans votre jeu.</p>
                         <div class="main-button scroll-to-section">
-                            <a href="html/signup.html">DEVENIR UN MEMBRE</a>
+                            {% if username %}
+                            
+                            {% else %}
+                            <a href=" /signup">DEVENIR UN MEMBRE</a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
@@ -204,7 +217,7 @@ https://templatemo.com/tm-548-training-studio
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-heading">
                         <h2>Obtenir<em> les performances</em></h2>
-                        <img src="assets/images/line-dec.png" alt="">
+                        <img src=" ../assets/images/line-dec.png" alt="">
                         <p>
                             Le système Gark Sport de détection et de suivi des joueurs, facilite l'extraction d'informations précieuses. Voici un guide pour commencer : </p>
                     </div>
@@ -213,17 +226,24 @@ https://templatemo.com/tm-548-training-studio
             <div class="row" id="tabs">
               <div class="col-lg-4">
                 <ul>
-                  <li><a href='#tabs-1'><img src="assets/images/plan1.png" alt="">Premiere étape</a></li>
-                  <li><a href='#tabs-2'><img src="assets/images/plan1.png" alt="">Deuxiéme étape</a></a></li>
-                  <li><a href='#tabs-3'><img src="assets/images/plan1.png" alt="">Troisiéme étape</a></a></li>
-                  <li><a href='#tabs-4'><img src="assets/images/plan1.png" alt="">Quatriéme étape</a></a></li>
-                  <div class="main-rounded-button"><a href="html/uplode.html">Lancer</a></div>
+                  <li><a href='#tabs-1'><img src=" ../assets/images/plan1.png" alt="">Premiere étape</a></li>
+                  <li><a href='#tabs-2'><img src=" ../assets/images/plan1.png" alt="">Deuxiéme étape</a></a></li>
+                  <li><a href='#tabs-3'><img src=" ../assets/images/plan1.png" alt="">Troisiéme étape</a></a></li>
+                  <li><a href='#tabs-4'><img src=" ../assets/images/plan1.png" alt="">Quatriéme étape</a></a></li>
+                  
+                  
+                  {% if username %}
+                  <div class="main-rounded-button"><a href="/uplode">Lancer</a></div>
+                  {% else %}
+                  <div class="main-rounded-button"><a href="/signup">Lancer</a></div>
+                  {% endif %}
+
                 </ul>
               </div>
               <div class="col-lg-8">
                 <section class='tabs-content'>
                   <article id='tabs-1'>
-                    <img src="assets/images/etape1.png" alt="First Class">
+                    <img src=" ../assets/images/etape1.png" alt="First Class">
                     <h4>Télécharger la vidéo</h4>
                     <p>Cliquez à l'intérieur de la zone de dépôt de fichier pour sélectionner et télécharger un fichier video ou faites glisser et déposez votre fichier là-bas</p>
                     <div class="main-button">
@@ -231,7 +251,7 @@ https://templatemo.com/tm-548-training-studio
                     </div>
                   </article>
                   <article id='tabs-2'>
-                    <img src="assets/images/etape2.png" alt="Second Training">
+                    <img src=" ../assets/images/etape2.png" alt="Second Training">
                     <h4>Lancer l'analyse</h4>
                     <p>Cliquez sur le bouton Démarrer pour démarrer un processus de détection des joueurs.</p>
                     <div class="main-button">
@@ -239,7 +259,7 @@ https://templatemo.com/tm-548-training-studio
                     </div>
                   </article>
                   <article id='tabs-3'>
-                    <img src="assets/images/" alt="Third Class">
+                    <img src=" ../assets/images/" alt="Third Class">
                     <h4>Consulter les résultats</h4>
                     <p>Une fois le processus lancé, un indicateur indiquant sa progression apparaît sur la page. Une fois tous les joueurs détectés, les statistiques apparaît sur la page.</p>
                     <div class="main-button">
@@ -247,7 +267,7 @@ https://templatemo.com/tm-548-training-studio
                     </div>
                   </article>
                   <article id='tabs-4'>
-                    <img src="assets/images/etape4.jpg" alt="Fourth Training">
+                    <img src=" ../assets/images/etape4.jpg" alt="Fourth Training">
                     <h4>Exploiter les insights</h4>
                     <p>Utilisez les insights obtenus pour optimiser vos stratégies de jeu, identifier les talents prometteurs, développer des plans d'entraînement personnalisés, et améliorer les performances globales de votre équipe.</p>
                     <div class="main-button">
@@ -279,7 +299,7 @@ https://templatemo.com/tm-548-training-studio
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-heading">
                         <h2>Expert <em>Trainers</em></h2>
-                        <img src="assets/images/line-dec.png" alt="">
+                        <img src=" ../assets/images/line-dec.png" alt="">
                         <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
                     </div>
                 </div>
@@ -288,7 +308,7 @@ https://templatemo.com/tm-548-training-studio
                 <div class="col-lg-4">
                     <div class="trainer-item">
                         <div class="image-thumb">
-                            <img src="assets/images/first-trainer.jpg" alt="">
+                            <img src=" ../assets/images/first-trainer.jpg" alt="">
                         </div>
                         <div class="down-content">
                             <span>Strength Trainer</span>
@@ -306,7 +326,7 @@ https://templatemo.com/tm-548-training-studio
                 <div class="col-lg-4">
                     <div class="trainer-item">
                         <div class="image-thumb">
-                            <img src="assets/images/second-trainer.jpg" alt="">
+                            <img src=" ../assets/images/second-trainer.jpg" alt="">
                         </div>
                         <div class="down-content">
                             <span>Muscle Trainer</span>
@@ -324,7 +344,7 @@ https://templatemo.com/tm-548-training-studio
                 <div class="col-lg-4">
                     <div class="trainer-item">
                         <div class="image-thumb">
-                            <img src="assets/images/third-trainer.jpg" alt="">
+                            <img src=" ../assets/images/third-trainer.jpg" alt="">
                         </div>
                         <div class="down-content">
                             <span>Power Trainer</span>
@@ -408,23 +428,23 @@ https://templatemo.com/tm-548-training-studio
     </footer>
 
     <!-- jQuery -->
-    <script src="assets/js/jquery-2.1.0.min.js"></script>
-    <script src="assets/js/scriptuplode.js"></script>
+    <script src=" ../assets/js/jquery-2.1.0.min.js"></script>
+    <script src=" ../assets/js/scriptuplode.js"></script>
 
     <!-- Bootstrap -->
-    <script src="assets/js/popper.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src=" ../assets/js/popper.js"></script>
+    <script src=" ../assets/js/bootstrap.min.js"></script>
 
     <!-- Plugins -->
-    <script src="assets/js/scrollreveal.min.js"></script>
-    <script src="assets/js/waypoints.min.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <script src="assets/js/imgfix.min.js"></script> 
-    <script src="assets/js/mixitup.js"></script> 
-    <script src="assets/js/accordions.js"></script>
+    <script src=" ../assets/js/scrollreveal.min.js"></script>
+    <script src=" ../assets/js/waypoints.min.js"></script>
+    <script src=" ../assets/js/jquery.counterup.min.js"></script>
+    <script src=" ../assets/js/imgfix.min.js"></script> 
+    <script src=" ../assets/js/mixitup.js"></script> 
+    <script src=" ../assets/js/accordions.js"></script>
     
     <!-- Global Init -->
-    <script src="assets/js/custom.js"></script>
+    <script src=" ../assets/js/custom.js"></script>
 
   </body>
 </html>

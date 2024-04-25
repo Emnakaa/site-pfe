@@ -17,7 +17,7 @@
               <nav class="main-nav">
                   <!-- ***** Logo Start ***** -->
                   
-                  <a href="index.html" class="logo"><img src="../assets/images/logo (1).png" alt="logo gark sport" style="width: 200px; height: auto;"></a>
+                  <a href="/" class="logo"><img src="../assets/images/logo (1).png" alt="logo gark sport" style="width: 200px; height: auto;"></a>
                   <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
 
                   <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.css">
@@ -26,12 +26,16 @@
                   <!-- ***** Logo End ***** -->
                   <!-- ***** Menu Start ***** -->
                   <ul class="nav">
-                      <li class="scroll-to-section"><a href="../index.html#top" class="active">Accueil</a></li>
-                      <li class="scroll-to-section"><a href="../index.html#features">A Propos</a></li>
-                      <li class="scroll-to-section"><a href="../index.html#our-classes">Fonctionnement</a></li>
-                      <li class="scroll-to-section"><a href="../index.html#schedule">Partenariat</a></li>
-                      <li class="scroll-to-section"><a href="../index.html#contact-us">Contactez-nous</a></li> 
-                      <li class="main-button "><a href="../html/login.html">Se connecter</a></li>
+                      <li class="scroll-to-section"><a href="/#top" class="active">Accueil</a></li>
+                      <li class="scroll-to-section"><a href="/#features">A Propos</a></li>
+                      <li class="scroll-to-section"><a href="/#our-classes">Fonctionnement</a></li>
+                      <li class="scroll-to-section"><a href="/#schedule">Partenariat</a></li>
+                      <li class="scroll-to-section"><a href="/#contact-us">Contactez-nous</a></li> 
+                      {% if username %}
+                            <li class="main-button "><a href="/logout">Quiter</a></li>
+                            {% else %}
+                            <li class="main-button "><a href="/login">Se connecter</a></li>
+                            {% endif %}
                   </ul>        
                   <a class='menu-trigger'>
                       <span>Menu</span>

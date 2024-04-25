@@ -29,23 +29,23 @@
     <div class="forms">
         <div class="form-content">
           <div class="login-form">
-            <a href="../index.html" class="logo"><img src="../assets/images/logo (1).png" alt="logo gark sport" style="width: 120px; height: auto;"></a>
+            <a href="/" class="logo"><img src="../assets/images/logo (1).png" alt="logo gark sport" style="width: 120px; height: auto;"></a>
                 <div class="title">Se connecter</div>
-                    <form action="#">
+                    <form action="/login" method="POST">
                         <div class="input-boxes">
                         <div class="input-box">
                             <i class="fas fa-envelope"></i>
-                            <input type="text" placeholder="Entrer votre Email" required>
+                            <input type="text" placeholder="Entrer votre Email"name='username'>
                         </div>
                         <div class="input-box">
                             <i class="fas fa-lock"></i>
-                            <input type="password" placeholder="Entrer votre Mot de passe" required>
+                            <input type="password" placeholder="Entrer votre Mot de passe" name="pwd">
                         </div>
                         <div class="text"><a href="#">Oublier votre Mot de passe?</a></div>
                         <div class="button input-box">
                             <input type="submit" value="Se connecter">
                         </div>
-                        <div class="text sign-up-text">Vous n'avait pas un compte? <label for="flip"><a href="signup.html" >S'inscrire</a></label></div>
+                        <div class="text sign-up-text">Vous n'avait pas un compte? <label for="flip"><a href="/signup" >S'inscrire</a></label></div>
                         </div>
                     </form>
             </div>

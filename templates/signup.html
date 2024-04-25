@@ -30,38 +30,45 @@
         <div class="form-content">
 
       <div class="signup-form">
-        <a href="../index.html" class="logo"><img src="../assets/images/logo (1).png" alt="logo gark sport" style="width: 120px; height: auto;"></a>
+        <a href="/" class="logo"><img src="../assets/images/logo (1).png" alt="logo gark sport" style="width: 120px; height: auto;"></a>
             <div class="title">S'inscrire</div>
 
-                <form action="#">
+                <form action="/signup" method="POST">
                     <div class="input-boxes">
+
+
+
+                        <div class="input-box">
+                            <i class="fas"></i>
+                                <input type="text" placeholder="Entrer votre NCIN" name="userid">
+                        </div>
 
 
                         <div class="input-box">
                         <i class="fas"></i>
-                            <input type="text" placeholder="Entrer votre Nom" required>
+                            <input type="text" placeholder="Entrer votre Nom" name="username">
                         </div>
 
                         <div class="input-box">
                         <i class="fas"></i>
-                            <input type="email" placeholder="Entrer votre Email" required>
+                            <input type="email" placeholder="Entrer votre Email" name="email">
                         </div>
 
                         <div class="input-box">
                             <i class="fas"></i>
-                                <input type="number" placeholder="Entrer votre Numero de Téléphone" required>
+                                <input type="number" placeholder="Entrer votre Numero de Téléphone" name="phone">
                         </div>
 
                         <div class="input-box">
                         <i class="fas"></i>
-                            <input type="password" placeholder="Entrer votre Mot de passe" required>
+                            <input type="password" placeholder="Entrer votre Mot de passe" name="pwd">
                         </div>
 
                         <div class="button input-box">
                             <input type="submit" value="Créer">
                         </div>
 
-                        <div class="text sign-up-text">Vous avait déja un compte? <label for="flip"> <a href="login.html">Se connecter</a></label></div>
+                        <div class="text sign-up-text">Vous avait déja un compte? <label for="flip"> <a href="/login">Se connecter</a></label></div>
                     </div>
                 </form>
 
