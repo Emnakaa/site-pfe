@@ -35,6 +35,30 @@ body{
   transform-style: preserve-3d;
 }
 
+/* Styles pour les messages flash */
+.alert {
+  padding: 15px;
+  margin-top:10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.alert-error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+.alert-vide {
+  color: #06006f;
+  background-color: #d7f7ff;
+  border-color: #d7f7ff;
+}
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
 
  .container .cover .front,
  .container .cover .back{

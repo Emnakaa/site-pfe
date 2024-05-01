@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <!-- Coding by CodingNepal | www.codingnepalweb.com-->
-<html lang="en" dir="ltr">
+<html lang="fr" dir="ltr">
   <head>
+    <link rel="icon" type="image/png" href="../assets/images/logomini.png">
     <meta charset="UTF-8">
-    <title> Login and Registration Form in HTML & CSS | CodingLab </title>
+    <title> S'inscrire</title>
     <!-- Fontawesome CDN Link -->
     <link rel="stylesheet" href="../assets/css/style1.css">
+    <script defer src="../assets/js/formulaire.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
 
@@ -33,43 +35,54 @@
         <a href="/" class="logo"><img src="../assets/images/logo (1).png" alt="logo gark sport" style="width: 120px; height: auto;"></a>
             <div class="title">S'inscrire</div>
 
-                <form action="/signup" method="POST">
+                <form action="/signup" method="POST" name="creer_compte" onsubmit="return verifcreer(document.creer_compte.pwd,document.creer_compte.pwd2)">
                     <div class="input-boxes">
 
-
-
                         <div class="input-box">
                             <i class="fas"></i>
-                                <input type="text" placeholder="Entrer votre NCIN" name="userid">
+                                <input type="text" placeholder="Entrer votre NCIN" name="userid" required>
                         </div>
 
 
                         <div class="input-box">
                         <i class="fas"></i>
-                            <input type="text" placeholder="Entrer votre Nom" name="username">
+                            <input type="text" placeholder="Entrer votre Nom" name="username" required>
                         </div>
 
                         <div class="input-box">
                         <i class="fas"></i>
-                            <input type="email" placeholder="Entrer votre Email" name="email">
+                            <input type="email" placeholder="Entrer votre Email" name="email" required>
                         </div>
 
                         <div class="input-box">
                             <i class="fas"></i>
-                                <input type="number" placeholder="Entrer votre Numero de Téléphone" name="phone">
+                                <input type="int" placeholder="Entrer votre Numero de Téléphone" name="phone" required>
                         </div>
 
                         <div class="input-box">
                         <i class="fas"></i>
-                            <input type="password" placeholder="Entrer votre Mot de passe" name="pwd">
+                            <input type="password" placeholder="Entrer votre Mot de passe" name="pwd" required>
                         </div>
 
+                        <div class="input-box">
+                          <i class="fas"></i>
+                              <input type="password" placeholder="Confirmer le Mot de passe" name="pwd2" required>
+                          </div>
+                          {% if messages %}
+                            {% for category, message in messages %}
+                              <div class="alert alert-{{ category }}">
+                                {{ message }}
+                              </div>
+                            {% endfor %}
+                          {% endif %}  
                         <div class="button input-box">
-                            <input type="submit" value="Créer">
+                            <input type="submit" value="S'inscrire">
                         </div>
 
                         <div class="text sign-up-text">Vous avait déja un compte? <label for="flip"> <a href="/login">Se connecter</a></label></div>
                     </div>
+ 
+              
                 </form>
 
 

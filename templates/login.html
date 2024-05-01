@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <!-- Coding by CodingNepal | www.codingnepalweb.com-->
-<html lang="en" dir="ltr">
+<html lang="fr" dir="ltr">
   <head>
+    <link rel="icon" type="image/png" href="../assets/images/logomini.png">
     <meta charset="UTF-8">
-    <title> Login and Registration Form in HTML & CSS | CodingLab </title>
+    <title> Se connecter </title>
     <!-- Fontawesome CDN Link -->
     <link rel="stylesheet" href="../assets/css/style1.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,7 +36,7 @@
                         <div class="input-boxes">
                         <div class="input-box">
                             <i class="fas fa-envelope"></i>
-                            <input type="text" placeholder="Entrer votre Email"name='username'>
+                            <input type="text" placeholder="Entrer votre Email"name='email'>
                         </div>
                         <div class="input-box">
                             <i class="fas fa-lock"></i>
@@ -47,6 +48,13 @@
                         </div>
                         <div class="text sign-up-text">Vous n'avait pas un compte? <label for="flip"><a href="/signup" >S'inscrire</a></label></div>
                         </div>
+                        {% if messages %}
+                        {% for category, message in messages %}
+                          <div class="alert alert-{{ category }}">
+                            {{ message }}
+                          </div>
+                        {% endfor %}
+                      {% endif %}
                     </form>
             </div>
       
